@@ -1,0 +1,116 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(270deg, #6a11cb, #2575fc, #6a11cb);
+  background-size: 600% 600%;
+  animation: gradientBG 20s ease infinite;
+  color: #222;
+  padding: 20px;
+}
+
+@keyframes gradientBG {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.container {
+  background-color: rgba(255, 255, 255, 0.9);
+  max-width: 350px;
+  width: 100%;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  transition: box-shadow 0.3s ease;
+  cursor: default;
+}
+
+.container:hover {
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.25);
+}
+
+h2 {
+  color: #2575fc;
+  font-weight: 700;
+  font-size: 28px;
+  margin-bottom: 25px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  user-select: none;
+}
+
+input[type="date"],
+input[type="text"] {
+  width: 100%;
+  padding: 12px 15px;
+  font-size: 16px;
+  border: 2px solid #ccc;
+  border-radius: 10px;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+  outline: none;
+  user-select: text;
+}
+
+input[type="date"]:focus,
+input[type="text"]:focus {
+  border-color: #2575fc;
+  box-shadow: 0 0 12px rgba(37, 117, 252, 0.5);
+}
+
+button {
+  margin-top: 20px;
+  width: 100%;
+  padding: 14px 0;
+  font-size: 18px;
+  font-weight: 700;
+  color: white;
+  background: linear-gradient(45deg, #2575fc, #6a11cb);
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  box-shadow: 0 6px 15px rgba(37, 117, 252, 0.6);
+  transition: background 0.4s ease, box-shadow 0.4s ease, transform 0.2s ease;
+  user-select: none;
+}
+
+button:hover {
+  background: linear-gradient(45deg, #6a11cb, #2575fc);
+  box-shadow: 0 8px 25px rgba(106, 17, 203, 0.75);
+  transform: scale(1.05);
+}
+
+button:active {
+  transform: scale(0.97);
+}
+
+#result {
+  margin-top: 25px;
+  font-weight: 600;
+  font-size: 20px;
+  color: #333;
+  min-height: 30px;
+  user-select: none;
+}
+
+.error {
+  color: #e63946;
+  font-weight: 700;
+  margin-top: 15px;
+  user-select: none;
+}
